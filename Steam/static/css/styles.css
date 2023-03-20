@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color:  #2d3039;
+    font-family: sans-serif;
+}
+
+.nav-link {
+    color: #dedede;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.navbar-brand {
+    padding-left: 7px;
+    color: #dedede;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+nav {
+    background-color: #24252A;
+}
+
+h1 {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: #dedede solid 3px;
+}
+
+.col-4 {
+    align-items: center;
+}
+
+.card {
+    background-color: #24252A;
+    color: #dedede;
+}
+
+.col-12 {
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+form {
+    color: white;
+}
+
+div .col-6  {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: x-large;
+    border-bottom: white solid 2px;
+}
+
+p {
+    color: white;
+    padding-top: 35px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.home-h1 {
+    border: none;
+}
+
+.card .btn {
+    background-color: #24252A;
+}
+
+.col .btn {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: x-large;
+    background-color: #24252A;
+}
+
+.btn-dark {
+    background-color: #24252A;
+    color: #dedede;
+    font-size: large;
+}
+
+.submited {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+input {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-title {
+    color: white;
+}
+
+h3 {
+    color: white;
+}

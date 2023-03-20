@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row text-center">
+    <div class="col">
+        <a href="{% url 'add' %}"><button type="button" class="btn btn-dark">Add</button></a>
+    </div>
+</div>
+<div class="row row-cols-3">
+    {% for hra in hry %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <a href="{% url 'hra' hra.idhry %}">
+                                <h4 class="card-title">{{ hra.nazev }}</h4>
+                            </a>
+                            <h5 class="card-text">{{ hra.cena_v_eur }} €</h5>
+                            <a href="{% url 'vydavatel' hra.publisher_idpublisher.idpublisher %}">
+                                <h5 class="card-text">{{ hra.publisher_idpublisher.nazev }}</h5>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a class="card-text" href="#"><button type="button" class="btn btn-dark">Update</button></a>
+                            <a class="card-text" href="{% url 'delete' hra.idhry %}"><button type="button" class="btn btn-dark">Delete</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% if hry.has_previous %}
+    <div class="col-12 text-center">
+        <button type="button" class="btn btn-dark"><a href="?page=1">&laquo First</a></button>
+        <button type="button" class="btn btn-dark"><a href="?page={{ hry.previous_page_number }}">Previous</a></button>
+    </div>
+    {% endif %}
+    {% if hry.has_next %}
+    <div class="col-12 text-center">
+        <button type="button" class="btn btn-dark"><a href="?page={{ hry.next_page_number }}">Next</a></button>
+        <button type="button" class="btn btn-dark"><a href="?page={{ hry.paginator.num_pages }}">Last &raquo</a></button>
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}

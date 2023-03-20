@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if submitted %}
+    <div class="row text-center">
+        <div class="col-12">
+            <p class="submited">Pridani bylo uspesne!</p>
+        </div>
+    </div>
+{% else %}
+<div class="row justify-content-center">
+    <div class="col-6">
+    <h1 class="text-center">Add Form</h1>
+    <form method=POST>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit" class="btn btn-dark">
+    </form>
+    </div>
+</div>
+{% endif %}
+
+{% endblock content %}

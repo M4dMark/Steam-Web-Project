@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <h1 class="text-center">{{ hra.nazev }}</h1>
+    <h3 class="text-center" style="color: white;">{{ hra.cena_v_eur }} €</h3>
+    <div class="col-12 text-center">
+        <h2 class="text-center">Recenze</h2>
+    {% for review in reviews %}
+        <div class="col-6 offset-md-3 text-center">
+            <p>{{ review.doporuceni }} / 10 </p>
+            <p>{{ review.text_recenze }}</p>
+            <p>{{ review.uzivatele_iduzivatele.nick }}</p>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock content %}  
